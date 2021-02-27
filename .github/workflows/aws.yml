@@ -77,6 +77,7 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: task-definition.json
-        service: sample-app-service
-        cluster: default
+        # task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: service-for-ecs-tutorial
+        cluster: cluster-for-ecs-tutorial
         wait-for-service-stability: true
