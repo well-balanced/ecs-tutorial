@@ -1,0 +1,24 @@
+{
+  "family": "[your task definition name]",
+  "executionRoleArn": "[your task definition excution role arn]",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "[your container name]",
+      "image": "[your ECR image and tag]",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024"
+}
