@@ -1,7 +1,7 @@
 on:
   push:
     branches: 
-      - master
+      - main
       - feature/docker-deploy
 
 name: Deploy to Amazon ECS
