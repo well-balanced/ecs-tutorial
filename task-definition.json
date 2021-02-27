@@ -1,0 +1,24 @@
+{
+  "family": "task-def-for-ecs-tutorial",
+  "executionRoleArn": "arn:aws:iam::414207599053:role/ecsTaskExecution",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "container-for-ecs-tutorial",
+      "image": "414207599053.dkr.ecr.ap-northeast-2.amazonaws.com/repo-for-ecs-tutorial:latest",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024"
+}
